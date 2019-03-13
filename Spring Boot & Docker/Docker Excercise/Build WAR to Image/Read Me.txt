@@ -1,0 +1,12 @@
+STEP 1 : Build WAR File to image
+docker build -f Dockerfile -t spring-docker-image .
+
+STEP 2 : Run image to Container (-p = define port number, --name = container name, -t = image name)
+docker run -p 8080:8080 --name spring_container -t spring-docker-image
+
+STEP 3 : Take IP & PORT of Docker Machine for run application
+docker-machine ls
+
+docker command
+- docker ps -a (view all docker)
+- docker ls (view all docker be starting)
